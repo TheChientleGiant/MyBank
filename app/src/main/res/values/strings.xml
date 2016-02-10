@@ -4,5 +4,5 @@
     <string name="amount_hint">Please enter an amount</string>
     <string name="withdraw">withdraw</string>
     <string name="deposit">deposit</string>
-    <string name="balance_placeholder">Your accoun'ts balance</string>
+    <string name="balance_placeholder">Your account's balance</string>
 </resources>
