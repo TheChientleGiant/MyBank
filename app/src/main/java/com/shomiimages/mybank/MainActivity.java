@@ -1,10 +1,7 @@
 package com.shomiimages.mybank;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
@@ -17,39 +14,39 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    EditText amountInput;
-    Button withdrawButton;
-    Button depositButton;
-    TextView amountDisplay;
-    BankAccount currentAccount;
+    EditText mAmountInput;
+    Button mWithdrawButton;
+    Button mDepositButton;
+    TextView mAmountDisplay;
+    BankAccount mCurrentAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        currentAccount = new BankAccount();
+        mCurrentAccount = new BankAccount();
 
-        amountInput = (EditText) findViewById(R.id.amount_input);
-        withdrawButton = (Button) findViewById(R.id.withdraw_button);
-        depositButton = (Button) findViewById(R.id.deposit_button);
-        amountDisplay = (TextView) findViewById(R.id.balance_display);
+        mAmountInput = (EditText) findViewById(R.id.amount_input);
+        mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
+        mDepositButton = (Button) findViewById(R.id.deposit_button);
+        mAmountDisplay = (TextView) findViewById(R.id.balance_display);
 
-        withdrawButton.setOnClickListener(new View.OnClickListener() {
+        mWithdrawButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String amount = amountInput.getText().toString();
-                currentAccount.withdraw(Double.parseDouble(amount));
-                amountDisplay.setText("Balance is " + currentAccount.getBalance());
+                String amount = mAmountInput.getText().toString();
+                mCurrentAccount.withdraw(Double.parseDouble(amount));
+                mAmountDisplay.setText("Balance is " + mCurrentAccount.getBalance());
             }
         });
 
-        depositButton.setOnClickListener(new View.OnClickListener() {
+        mDepositButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String amount = amountInput.getText().toString();
-                currentAccount.deposit(Double.parseDouble(amount));
-                amountDisplay.setText("Balance is " + currentAccount.getBalance());
+                String amount = mAmountInput.getText().toString();
+                mCurrentAccount.deposit(Double.parseDouble(amount));
+                mAmountDisplay.setText("Balance is " + mCurrentAccount.getBalance());
             }
         });
 
