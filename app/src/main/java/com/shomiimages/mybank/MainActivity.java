@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -24,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(200);
+        arrayList.add(300);
+
+        for(int i=0; i<arrayList.size(); i++){
+            Log.d(TAG, "Array item is "+arrayList.get(i));
+        }
 
         mCurrentAccount = new BankAccount();
 
