@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.shomiimages.accounts.BankAccount;
+import com.shomiimages.accounts.SavingsAccount;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "Array item is "+arrayList.get(i));
         }
 
-        mCurrentAccount = new BankAccount(BankAccount.Type.SAVINGS);
+        mCurrentAccount = new SavingsAccount();
 
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
