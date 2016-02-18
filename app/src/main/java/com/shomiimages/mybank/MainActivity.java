@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "Array item is "+arrayList.get(i));
         }
 
-        mCurrentAccount = new BankAccount(BankAccount.Type.CHECKING);
+        mCurrentAccount = new BankAccount(BankAccount.Type.SAVINGS);
 
         mAmountInput = (EditText) findViewById(R.id.amount_input);
         mWithdrawButton = (Button) findViewById(R.id.withdraw_button);
